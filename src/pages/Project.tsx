@@ -33,7 +33,7 @@ const progressStats = [
   { icon: Users, value: "15+", label: "Researchers engaged across 14 Nigerian states" },
   { icon: Users, value: "60+", label: "Researchers active in our research community" },
   { icon: Video, value: "Multiple", label: "Webinars on translational research and innovation" },
-  { icon: Handshake, value: "Strategic", label: "Partnerships with NANDS, Clarit studio" },
+  { icon: Handshake, value: "Strategic", label: "Partnerships with NANDS and Clarit Studio" },
 ];
 
 const timeline = [
@@ -54,7 +54,7 @@ const Project = () => {
             transition={{ duration: 0.6 }}
             className="max-w-4xl"
           >
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-secondary font-semibold text-sm uppercase tracking-wider mb-4 block">
               Our Flagship Project
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-6">
@@ -173,8 +173,8 @@ const Project = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-purple-700 rounded-xl p-6"
               >
-                <stat.icon className="w-8 h-8 text-accent mb-4" />
-                <div className="text-accent font-heading font-bold text-2xl mb-2">
+                <stat.icon className="w-8 h-8 text-secondary mb-4" />
+                <div className="text-secondary font-heading font-bold text-2xl mb-2">
                   {stat.value}
                 </div>
                 <p className="text-background/80 text-sm">{stat.label}</p>
@@ -211,7 +211,7 @@ const Project = () => {
                   <div className="w-24 flex-shrink-0">
                     <span className="text-primary font-heading font-bold">{item.period}</span>
                   </div>
-                  <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                  <div className="w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
                   <p className="text-foreground">{item.activity}</p>
                 </motion.div>
               ))}

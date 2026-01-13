@@ -47,7 +47,7 @@ const Fellowship = () => {
             transition={{ duration: 0.6 }}
             className="max-w-4xl"
           >
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-secondary font-semibold text-sm uppercase tracking-wider mb-4 block">
               Fellowship Program
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-6">
@@ -119,8 +119,8 @@ const Fellowship = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-card rounded-xl p-6 text-center card-lift"
               >
-                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-7 h-7 text-accent" />
+                <div className="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-7 h-7 text-secondary" />
                 </div>
                 <p className="text-foreground font-heading font-bold">{item.title}</p>
               </motion.div>
@@ -157,7 +157,7 @@ const Fellowship = () => {
                     transition={{ duration: 0.6, delay: index * 0.15 }}
                     className="flex items-center gap-6"
                   >
-                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0 z-10 font-heading font-bold text-accent-foreground">
+                    <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 z-10 font-heading font-bold text-secondary-foreground">
                       {item.step}
                     </div>
                     <div className="flex-1 bg-purple-700 rounded-xl p-6">
@@ -166,7 +166,7 @@ const Fellowship = () => {
                           {item.title}
                         </h3>
                         {item.status && (
-                          <span className="text-accent text-sm font-semibold">
+                          <span className="text-secondary text-sm font-semibold">
                             {item.status}
                           </span>
                         )}

@@ -50,7 +50,7 @@ export function ResearchInterestsSection() {
             Our Research Interests
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            These focus areas guide where we apply our research — not limit it.
+            These focus areas guide where we apply our research — but our work is not limited to these sectors.
           </p>
         </motion.div>
 

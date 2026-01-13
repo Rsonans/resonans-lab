@@ -104,7 +104,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="bg-purple-700 rounded-xl p-8"
             >
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider mb-4 block">
                 Vision
               </span>
               <p className="text-background text-lg leading-relaxed">
@@ -137,7 +137,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start gap-4 p-6 rounded-lg border border-border"
               >
-                <div className="w-2 h-2 rounded-full bg-accent mt-2.5 flex-shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-secondary mt-2.5 flex-shrink-0" />
                 <p className="text-foreground text-lg">{belief}</p>
               </motion.div>
             ))}
@@ -173,10 +173,10 @@ const About = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-8 h-8 text-secondary" />
                 </div>
-                <div className="text-accent font-bold text-2xl mb-2">{index + 1}</div>
+                <div className="text-secondary font-bold text-2xl mb-2">{index + 1}</div>
                 <h3 className="text-background font-heading font-bold text-xl mb-2">
                   {step.title}
                 </h3>

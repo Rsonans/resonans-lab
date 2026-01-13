@@ -14,7 +14,7 @@ export function FlagshipProjectSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider mb-4 block">
+            <span className="text-secondary font-semibold text-sm uppercase tracking-wider mb-4 block">
               Our Flagship Project
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-background mb-6">
@@ -45,7 +45,7 @@ export function FlagshipProjectSection() {
               <div className="w-full h-full rounded-xl bg-purple-700 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="text-6xl mb-4">👐</div>
-                  <p className="text-accent font-heading font-bold text-xl">
+                  <p className="text-secondary font-heading font-bold text-xl">
                     Building Inclusion
                   </p>
                   <p className="text-background/70 mt-2">
@@ -55,8 +55,8 @@ export function FlagshipProjectSection() {
               </div>
             </div>
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/30 rounded-full blur-2xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/30 rounded-full blur-2xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl" />
           </motion.div>
         </div>
       </div>
