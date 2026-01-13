@@ -33,6 +33,11 @@ const partnerTypes = [
     title: "Government & Policy Bodies",
     description: "Leverage research for evidence-based policy making"
   },
+  { 
+    icon: Users, 
+    title: "Individuals & Other Organizations",
+    description: "We welcome partnerships beyond these sectors — reach out if you share our vision"
+  },
 ];
 
 const Partner = () => {
