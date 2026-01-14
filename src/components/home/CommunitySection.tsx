@@ -18,7 +18,7 @@ export function CommunitySection() {
               transition={{ duration: 0.6 }}
               className="mb-12"
             >
-              <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
+              <span className="text-accent text-sm font-semibold uppercase tracking-widest block mb-4">
                 Community
               </span>
               <h2 className="text-4xl md:text-5xl font-heading font-bold text-background">
@@ -42,7 +42,7 @@ export function CommunitySection() {
                     Community of Scholars
                   </h3>
                   <p className="text-background/70 leading-relaxed">
-                    A growing network of African researchers learning, collaborating, and building solutions together.
+                    A closed WhatsApp community of African researchers learning, collaborating, and building solutions together.
                   </p>
                 </div>
               </motion.div>
@@ -64,7 +64,7 @@ export function CommunitySection() {
                   <p className="text-background/70 leading-relaxed mb-4">
                     A guided program supporting students and early-career researchers to translate their research into real-world impact.
                   </p>
-                  <Button variant="heroOutline" size="sm" asChild>
+                  <Button variant="heroOutline" className="border-accent" size="sm" asChild>
                     <Link to="/fellowship">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />

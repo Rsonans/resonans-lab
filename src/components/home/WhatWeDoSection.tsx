@@ -36,7 +36,7 @@ export function WhatWeDoSection() {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
+          <span className="text-accent text-sm font-semibold uppercase tracking-widest block mb-4">
             Our Process
           </span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-background max-w-xl">
@@ -53,7 +53,7 @@ export function WhatWeDoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`bg-purple-700/60 backdrop-blur-sm rounded-2xl p-8 lg:p-10 border border-purple-500/20 ${
+              className={`bg-purple-600/60 backdrop-blur-sm rounded-2xl p-8 lg:p-10 border border-purple-500/20 ${
                 index === 1 ? 'lg:mt-12' : index === 2 ? 'lg:mt-24' : ''
               }`}
             >
@@ -61,7 +61,7 @@ export function WhatWeDoSection() {
                 <div className="w-14 h-14 rounded-xl bg-secondary/20 flex items-center justify-center">
                   <block.icon className="w-7 h-7 text-secondary" />
                 </div>
-                <span className="text-purple-400 font-heading font-bold text-sm">
+                <span className="text-purple-300 font-heading font-bold text-sm">
                   {block.number}
                 </span>
               </div>

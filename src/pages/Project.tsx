@@ -59,7 +59,7 @@ const Project = () => {
               transition={{ duration: 0.6 }}
               className="lg:col-span-6"
             >
-              <span className="text-secondary font-semibold text-sm uppercase tracking-widest mb-6 block">
+              <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-6 block">
                 Our Flagship Project
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-6 leading-tight">
@@ -212,7 +212,7 @@ const Project = () => {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
+            <span className="text-accent text-sm font-semibold uppercase tracking-widest block mb-4">
               Milestones
             </span>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-background">
@@ -231,7 +231,7 @@ const Project = () => {
                 className="bg-purple-700/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20"
               >
                 <stat.icon className="w-8 h-8 text-secondary mb-6" />
-                <div className="text-secondary font-heading font-bold text-3xl mb-2">
+                <div className="text-accent/90 font-heading font-bold text-3xl mb-2">
                   {stat.value}
                 </div>
                 <p className="text-background/70">{stat.label}</p>

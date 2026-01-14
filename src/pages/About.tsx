@@ -111,9 +111,9 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-5 bg-purple-700/50 backdrop-blur-sm rounded-2xl p-10 border border-purple-500/20"
+              className="lg:col-span-5 bg-secondary/10 backdrop-blur-sm rounded-2xl p-10 border border-purple-500/20"
             >
-              <span className="text-secondary font-semibold text-sm uppercase tracking-widest mb-6 block">
+              <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-6 block">
                 Mission
               </span>
               <p className="text-background text-xl leading-relaxed">
@@ -126,9 +126,9 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="lg:col-span-6 lg:col-start-7 lg:mt-16 bg-purple-700/50 backdrop-blur-sm rounded-2xl p-10 border border-purple-500/20"
+              className="lg:col-span-6 lg:col-start-7 lg:mt-16 bg-secondary/10 backdrop-blur-sm rounded-2xl p-10 border border-purple-500/20"
             >
-              <span className="text-secondary font-semibold text-sm uppercase tracking-widest mb-6 block">
+              <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-6 block">
                 Vision
               </span>
               <p className="text-background text-xl leading-relaxed">

@@ -25,7 +25,7 @@ export function HeroSection() {
               transition={{ duration: 0.4 }}
               className="inline-block mb-6"
             >
-              <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
+              <span className="text-accent text-sm font-semibold uppercase tracking-widest">
                 Research, translated
               </span>
             </motion.div>
@@ -39,7 +39,7 @@ export function HeroSection() {
               We Turn Research Into{" "}
               <span className="relative">
                 <span className="text-background">Real Solutions</span>
-                <span className="absolute -bottom-2 left-0 w-full h-1 bg-accent/60" />
+                <span className="absolute -bottom-2 left-0 w-full h-1 bg-secondary" />
               </span>
             </motion.h1>
             
@@ -58,10 +58,10 @@ export function HeroSection() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="secondary" size="xl" asChild>
                 <Link to="/#what-we-do">
                   See What We're Building
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="text-accent ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
@@ -79,16 +79,16 @@ export function HeroSection() {
           >
             <div className="relative">
               {/* Floating stat cards with asymmetric placement */}
-              <div className="absolute top-0 right-0 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-                <div className="text-secondary font-heading font-bold text-3xl">60+</div>
+              <div className="absolute -top-24 right-0 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
+                <div className="text-accent/60 font-heading font-bold text-3xl">60+</div>
                 <div className="text-background/70 text-sm mt-1">Active researchers</div>
               </div>
-              <div className="absolute top-32 right-24 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-                <div className="text-secondary font-heading font-bold text-3xl">14</div>
+              <div className="absolute top-12 right-24 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
+                <div className="text-accent/60 font-heading font-bold text-3xl">14</div>
                 <div className="text-background/70 text-sm mt-1">Nigerian states</div>
               </div>
-              <div className="absolute top-64 right-8 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-                <div className="text-secondary font-heading font-bold text-3xl">1</div>
+              <div className="absolute top-44 right-8 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
+                <div className="text-accent/60 font-heading font-bold text-3xl">1</div>
                 <div className="text-background/70 text-sm mt-1">Flagship project</div>
               </div>
             </div>

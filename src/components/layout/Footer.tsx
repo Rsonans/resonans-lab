@@ -29,7 +29,7 @@ export function Footer() {
 
           {/* Quick links */}
           <div className="lg:col-span-3 lg:col-start-7">
-            <h4 className="text-secondary font-heading font-bold text-sm uppercase tracking-widest mb-6">
+            <h4 className="text-accent font-heading font-bold text-sm uppercase tracking-widest mb-6">
               Quick Links
             </h4>
             <ul className="space-y-4">
@@ -60,7 +60,7 @@ export function Footer() {
                 placeholder="Your email"
                 className="bg-purple-700/50 border-purple-500/30 text-background placeholder:text-background/50 h-12"
               />
-              <Button variant="hero" size="default" className="w-full">
+              <Button variant="heroSecondary" size="default" className="w-full">
                 Subscribe
               </Button>
             </form>

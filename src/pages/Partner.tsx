@@ -59,7 +59,7 @@ const Partner = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="text-secondary font-semibold text-sm uppercase tracking-widest mb-6 block">
+            <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-6 block">
               Partnerships
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-8 leading-tight">

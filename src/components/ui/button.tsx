@@ -24,6 +24,8 @@ const buttonVariants = cva(
         // Hero variant - Yellow accent button for dark backgrounds
         hero: 
           "bg-accent text-accent-foreground shadow-lg hover:shadow-xl hover:scale-105 glow-accent font-bold",
+        heroSecondary: 
+          "bg-secondary text-secondary-foreground shadow-lg hover:shadow-xl hover:scale-105 glow-purple/100 font-bold",
         // Hero outline for secondary CTAs on dark backgrounds  
         heroOutline:
           "border-2 border-background/80 bg-transparent text-background hover:bg-background/10 hover:border-background",

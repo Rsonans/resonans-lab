@@ -22,7 +22,7 @@ export function PartnershipsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-6">
+            <span className="text-accent text-sm font-semibold uppercase tracking-widest block mb-6">
               Partnerships
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-8 leading-tight">
@@ -31,7 +31,7 @@ export function PartnershipsSection() {
             <p className="text-background/80 text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
               Real change happens when research meets action. We work with universities, companies, nonprofits, and community organizations to make solutions sustainable and scalable.
             </p>
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="heroSecondary" size="xl" asChild>
               <Link to="/partner">
                 Partner With Us
                 <ArrowRight className="ml-2 h-5 w-5" />

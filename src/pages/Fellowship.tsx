@@ -50,7 +50,7 @@ const Fellowship = () => {
               transition={{ duration: 0.6 }}
               className="lg:col-span-6"
             >
-              <span className="text-secondary font-semibold text-sm uppercase tracking-widest mb-6 block">
+              <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-6 block">
                 Fellowship Program
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-6 leading-tight">
@@ -176,7 +176,7 @@ const Fellowship = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
+            <span className="text-accent text-sm font-semibold uppercase tracking-widest block mb-4">
               The Process
             </span>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-background">
@@ -197,10 +197,10 @@ const Fellowship = () => {
                 >
                   {/* Connector */}
                   {index < journeySteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-purple-500/50 -translate-x-1/2" />
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-purple-500/80 -translate-x-1/2" />
                   )}
                   
-                  <div className="bg-purple-700/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 text-center">
+                  <div className="bg-purple-700 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 text-center">
                     <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto mb-6 font-heading font-bold text-2xl text-purple-800">
                       {item.step}
                     </div>
@@ -208,7 +208,7 @@ const Fellowship = () => {
                       {item.title}
                     </h3>
                     {item.status && (
-                      <span className="text-secondary text-sm font-semibold">
+                      <span className="text-accent text-sm font-semibold">
                         {item.status}
                       </span>
                     )}
