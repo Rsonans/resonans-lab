@@ -2,61 +2,61 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import projectImage from "@/assets/project-inclusion.jpg";
 
 export function FlagshipProjectSection() {
   return (
-    <section className="py-24 bg-purple-dark">
+    <section className="py-32 bg-background overflow-hidden">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          {/* Image column - offset to the left edge */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7 }}
+            className="lg:col-span-6 relative"
           >
-            <span className="text-secondary font-semibold text-sm uppercase tracking-wider mb-4 block">
+            <div className="relative">
+              {/* Main image */}
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+                <img 
+                  src={projectImage} 
+                  alt="Hands reaching toward sound waves representing deaf inclusion" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Decorative frame offset */}
+              <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-secondary/30 rounded-2xl -z-10" />
+            </div>
+          </motion.div>
+          
+          {/* Content column */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="lg:col-span-5 lg:col-start-8"
+          >
+            <span className="text-secondary font-semibold text-sm uppercase tracking-widest mb-6 block">
               Our Flagship Project
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-background mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 leading-tight">
               Resonating Beyond Sound
             </h2>
-            <p className="text-background/80 text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Millions of deaf people across Nigeria are excluded from education, jobs, and leadership — not because of ability, but because existing tools don't reflect local languages or realities.
             </p>
-            <p className="text-background/70 text-base leading-relaxed mb-8">
+            <p className="text-foreground text-base leading-relaxed mb-10">
               Resonating Beyond Sound is our first major project, focused on changing that through research-led, context-aware solutions.
             </p>
-            <Button variant="hero" size="lg" asChild>
+            <Button variant="default" size="lg" asChild>
               <Link to="/project">
                 Explore the Project
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-500 to-purple-300 p-1">
-              <div className="w-full h-full rounded-xl bg-purple-700 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-6xl mb-4">👐</div>
-                  <p className="text-secondary font-heading font-bold text-xl">
-                    Building Inclusion
-                  </p>
-                  <p className="text-background/70 mt-2">
-                    That Reflects Reality
-                  </p>
-                </div>
-              </div>
-            </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/30 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl" />
           </motion.div>
         </div>
       </div>
