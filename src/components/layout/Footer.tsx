@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import logoYellow from "@/assets/resonans-logo-yellow.png";
+import logoLight from "@/assets/resonans-logo-light.png";
 
 const quickLinks = [
   { name: "About Us", href: "/about" },
@@ -14,27 +14,30 @@ const quickLinks = [
 export function Footer() {
   return (
     <footer className="bg-purple-dark text-background">
-      <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Brand column */}
-          <div className="lg:col-span-2">
-            <img src={logoYellow} alt="Resonans" className="h-10 w-auto mb-6" />
-            <p className="text-background/80 max-w-md text-base leading-relaxed">
+          <div className="lg:col-span-5">
+            <img src={logoLight} alt="Resonans" className="h-10 w-auto mb-8" />
+            <p className="text-background/70 max-w-md text-lg leading-relaxed mb-8">
               Resonans is a research-led organization translating knowledge into real-world impact across Africa.
+            </p>
+            <p className="text-background/40 text-sm italic">
+              Where research meets real life
             </p>
           </div>
 
           {/* Quick links */}
-          <div>
-            <h4 className="text-accent font-heading font-bold text-sm uppercase tracking-wider mb-4">
+          <div className="lg:col-span-3 lg:col-start-7">
+            <h4 className="text-secondary font-heading font-bold text-sm uppercase tracking-widest mb-6">
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-background/70 hover:text-accent transition-colors duration-200"
+                    className="text-background/70 hover:text-secondary transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -44,36 +47,31 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h4 className="text-accent font-heading font-bold text-sm uppercase tracking-wider mb-4">
+          <div className="lg:col-span-4">
+            <h4 className="text-secondary font-heading font-bold text-sm uppercase tracking-widest mb-6">
               Stay Updated
             </h4>
-            <p className="text-background/70 mb-4 text-sm">
+            <p className="text-background/70 mb-6">
               Stay updated on our research, projects, and impact.
             </p>
-            <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <Input
                 type="email"
                 placeholder="Your email"
-                className="bg-purple-700 border-purple-600 text-background placeholder:text-background/50"
+                className="bg-purple-700/50 border-purple-500/30 text-background placeholder:text-background/50 h-12"
               />
-              <Button variant="hero" size="sm" className="w-full">
+              <Button variant="hero" size="default" className="w-full">
                 Subscribe
               </Button>
             </form>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-purple-600">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-background/60 text-sm">
-              © {new Date().getFullYear()} Resonans. All rights reserved.
-            </p>
-            <p className="text-background/40 text-sm italic">
-              Where research meets real life
-            </p>
-          </div>
+        {/* Thin yellow divider */}
+        <div className="mt-16 pt-8 border-t border-accent/30">
+          <p className="text-background/50 text-sm text-center">
+            © {new Date().getFullYear()} Resonans. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
