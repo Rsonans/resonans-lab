@@ -9,8 +9,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const navigation = [
   { name: "About", href: "/about" },
   { name: "Our Work", href: "/#what-we-do" },
-  { name: "Flagship Project", href: "/project" },
+  { name: "Project", href: "/project" },
   { name: "Fellowship", href: "/fellowship" },
+  { name: "Join Us", href: "/join-us" },
 ];
 
 interface HeaderProps {
