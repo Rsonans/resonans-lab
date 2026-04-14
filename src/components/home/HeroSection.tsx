@@ -2,22 +2,41 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroAbstract from "@/assets/hero-abstract.jpg";
+import resonanceImg from "@/assets/Resonance.png";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden w-full">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroAbstract})` }}
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden w-full"
+      style={{ background: "#EFEFEF" }}
+    >
+      {/* Ellipse — top-left */}
+      <div
+        className="absolute -top-20 -left-20 w-72 h-72 rounded-full pointer-events-none"
+        style={{ background: "rgba(156, 0, 117, 0.3)" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-800/95 via-purple-700/80 to-transparent" />
-      
-      {/* Content with asymmetric layout */}
+
+      {/* Image — background blended out */}
+      <div
+        className="absolute overflow-hidden rounded-2xl pointer-events-none"
+        style={{
+          top: "150px",
+          left: "1200px",
+          width: "750px",
+          height: "850px",
+        }}
+      >
+        <img
+          src={resonanceImg}
+          alt="Resonance"
+          className="w-full h-full object-cover"
+          style={{ mixBlendMode: "multiply" }}
+        />
+      </div>
+
       <div className="container relative z-10 pt-32 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left content - takes up 7 columns */}
+          {/* Left content */}
           <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0 }}
@@ -25,31 +44,38 @@ export function HeroSection() {
               transition={{ duration: 0.4 }}
               className="inline-block mb-6"
             >
-              <span className="text-accent text-sm font-semibold uppercase tracking-widest">
+              <span
+                className="text-sm font-semibold uppercase tracking-widest"
+                style={{ color: "#4B0082" }}
+              >
                 Research, translated
               </span>
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-background leading-[1.1] mb-8"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-[1.1] mb-8"
+              style={{ color: "#4B0082" }}
             >
               We Turn Research Into{" "}
               <span className="relative">
-                <span className="text-background">Real Solutions</span>
+                <span style={{ color: "#4B0082" }}>Real Solutions</span>
                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-secondary" />
               </span>
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-              className="text-lg md:text-xl text-background/85 max-w-xl mb-12 leading-relaxed"
+              className="text-lg md:text-xl max-w-xl mb-12 leading-relaxed"
+              style={{ color: "rgba(75, 0, 130, 0.85)" }}
             >
-              Resonans helps researchers move their ideas out of journals and into the real world — building tools, systems, and partnerships that solve everyday problems across Africa.
+              Resonans helps researchers move their ideas out of journals and
+              into the real world — building tools, systems, and partnerships
+              that solve everyday problems across Africa.
             </motion.p>
 
             <motion.div
@@ -61,7 +87,7 @@ export function HeroSection() {
               <Button variant="secondary" size="xl" asChild>
                 <Link to="/#what-we-do">
                   See What We're Building
-                  <ArrowRight className="text-accent ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5" style={{ color: "#4B0082" }} />
                 </Link>
               </Button>
               <Button variant="heroOutline" size="xl" asChild>
@@ -69,30 +95,6 @@ export function HeroSection() {
               </Button>
             </motion.div>
           </div>
-          
-          {/* Right side - decorative stats */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="lg:col-span-5 hidden lg:block"
-          >
-            <div className="relative">
-              {/* Floating stat cards with asymmetric placement */}
-              <div className="absolute -top-24 right-0 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-                <div className="text-accent/60 font-heading font-bold text-3xl">60+</div>
-                <div className="text-background/70 text-sm mt-1">Active researchers</div>
-              </div>
-              <div className="absolute top-12 right-24 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-                <div className="text-accent/60 font-heading font-bold text-3xl">14</div>
-                <div className="text-background/70 text-sm mt-1">Nigerian states</div>
-              </div>
-              <div className="absolute top-44 right-8 bg-purple-700/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
-                <div className="text-accent/60 font-heading font-bold text-3xl">1</div>
-                <div className="text-background/70 text-sm mt-1">Flagship project</div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
