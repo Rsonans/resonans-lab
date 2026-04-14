@@ -2,51 +2,20 @@ import { motion } from "framer-motion";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { 
   Search, 
-  Palette, 
+  FileText,
+  Lightbulb,
   Hammer, 
-  TrendingUp,
-  Users,
-  Code,
-  Megaphone,
-  UserCheck
+  Rocket,
+  Target
 } from "lucide-react";
 import aboutHero from "@/assets/about-hero.jpg";
 
-const beliefs = [
-  "Research should solve problems, not just explain them",
-  "Solutions work best when built with local context in mind",
-  "Communities should help shape the tools designed for them",
-  "Collaboration across academia, industry, and society drives lasting change",
-];
-
-const approachSteps = [
-  { icon: Search, title: "Research", description: "Understand the problem deeply" },
-  { icon: Palette, title: "Design", description: "Translate insight into practical ideas" },
-  { icon: Hammer, title: "Build", description: "Develop tools, systems, or partnerships" },
-  { icon: TrendingUp, title: "Scale", description: "Test, refine, and expand impact" },
-];
-
-const teamRoles = [
-  { 
-    icon: Users, 
-    title: "Researchers", 
-    description: "Lead studies, analyze systems, and design evidence-based interventions" 
-  },
-  { 
-    icon: Code, 
-    title: "Engineers & Product Designers", 
-    description: "Build research-driven technologies and platforms" 
-  },
-  { 
-    icon: Megaphone, 
-    title: "Creative Communications Team", 
-    description: "Translate research into stories that inform and inspire action" 
-  },
-  { 
-    icon: UserCheck, 
-    title: "Advisory Network", 
-    description: "Experienced researchers and industry leaders guiding strategy" 
-  },
+const cycleSteps = [
+  { icon: Search, title: "Understanding the problem" },
+  { icon: FileText, title: "Generating evidence" },
+  { icon: Lightbulb, title: "Translating insights" },
+  { icon: Hammer, title: "Building solutions" },
+  { icon: Rocket, title: "Testing and distributing them" },
 ];
 
 const About = () => {
@@ -62,21 +31,18 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="lg:col-span-7"
             >
-              <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-6">
-                About Resonans
+              <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
+                Who We Are
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-8 leading-tight">
-                Why We Exist
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
+                Resonans exists to solve a simple problem:
               </h1>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Across Africa, powerful research is being done every day — but much of it never leaves classrooms or journals.
+              <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
+                <p className="text-foreground font-semibold text-2xl lg:text-3xl relative pl-6 border-l-4 border-accent py-2 leading-tight">
+                  Too much valuable research never leaves papers.
                 </p>
-                <p className="text-foreground font-semibold text-xl relative pl-6 border-l-2 border-accent">
-                  Resonans exists to change that.
-                </p>
-                <p>
-                  We take research seriously, but we take impact even more seriously. Our work begins with understanding real problems and ends with solutions people can actually use.
+                <p className="text-xl">
+                  We identify real-world challenges, conduct structured research, and translate findings into solutions that people can actually use.
                 </p>
               </div>
             </motion.div>
@@ -88,184 +54,94 @@ const About = () => {
               className="lg:col-span-5"
             >
               <div className="relative">
-                <div className="aspect-square rounded-2xl overflow-hidden">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <img 
                     src={aboutHero} 
-                    alt="Abstract representation of research and community connection in Africa" 
+                    alt="Abstract representation of research and community connection" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-full h-full border-2 border-secondary/30 rounded-2xl -z-10" />
+                <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-secondary/30 rounded-2xl -z-10" />
+                <div className="absolute -top-6 -right-6 w-full h-full border-2 border-primary/20 rounded-2xl -z-10" />
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision - Asymmetric layout */}
-      <section className="py-24 bg-purple-dark">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      {/* What Makes Us Different */}
+      <section className="py-32 bg-purple-dark relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)]" style={{ backgroundSize: '24px 24px' }} />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+        <div className="container relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-5 bg-secondary/10 backdrop-blur-sm rounded-2xl p-10 border border-purple-500/20"
             >
-              <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-6 block">
-                Mission
+              <span className="inline-block py-1 px-4 rounded-full bg-secondary/20 text-secondary text-sm font-semibold uppercase tracking-widest mb-8 border border-secondary/30">
+                What makes us different
               </span>
-              <p className="text-background text-xl leading-relaxed">
-                To bridge the gap between research and real impact by translating academic findings into practical, context-aware solutions that improve lives across Africa.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="lg:col-span-6 lg:col-start-7 lg:mt-16 bg-secondary/10 backdrop-blur-sm rounded-2xl p-10 border border-purple-500/20"
-            >
-              <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-6 block">
-                Vision
-              </span>
-              <p className="text-background text-xl leading-relaxed">
-                A continent where research doesn't sit in journals but drives inclusive innovation across education, health, technology, and society — shaping a future built on knowledge and action.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Believe */}
-      <section className="py-24 bg-muted">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-4"
-            >
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground sticky top-32">
-                What We Believe
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-8 leading-tight">
+                We don’t treat research as the final output. <br className="hidden md:block" />
+                <span className="text-secondary block mt-4">We treat it as the starting point.</span>
               </h2>
             </motion.div>
-            
-            <div className="lg:col-span-7 lg:col-start-6 space-y-6">
-              {beliefs.map((belief, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start gap-6 p-6 bg-card rounded-xl"
-                >
-                  <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-secondary font-bold text-sm">{index + 1}</span>
-                  </div>
-                  <p className="text-foreground text-lg leading-relaxed">{belief}</p>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Our Approach */}
-      <section className="py-24 bg-background">
+      {/* The Cycle */}
+      <section className="py-24 bg-muted relative">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20 max-w-3xl mx-auto"
           >
-            <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
-              How We Work
-            </span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              Our Approach: Translational Research
+            <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-2xl mb-6 text-primary shadow-inner">
+               <Target className="w-8 h-8" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground leading-tight">
+              Every project we run moves through a <span className="text-primary relative inline-block mx-2">
+                full cycle
+                <span className="absolute bottom-1 left-0 w-full h-3 bg-secondary/30 -z-10 rounded-full"></span>
+              </span>
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Every Resonans project follows a clear cycle
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {approachSteps.map((step, index) => (
+          {/* Cycle Steps Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 gap-y-12">
+            {cycleSteps.map((step, index) => (
               <motion.div
-                key={step.title}
+                key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center relative"
+                className="relative group bg-card rounded-2xl p-8 hover:bg-purple-700 transition-all duration-500 shadow-sm border border-border/50 hover:border-purple-600 hover:shadow-2xl flex flex-col items-center text-center -mt-2 hover:-translate-y-2"
               >
-                {/* Connector line */}
-                {index < approachSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-border" />
+                {/* Visual Connector for desktop */}
+                {index < cycleSteps.length - 1 && (
+                  <div className="hidden lg:block absolute top-[40%] -right-3 w-6 h-0.5 bg-border group-hover:bg-accent/50 transition-colors z-0" />
                 )}
-                <div className="relative z-10 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <step.icon className="w-8 h-8 text-primary" />
+                
+                <div className="w-20 h-20 rounded-2xl bg-secondary/10 group-hover:bg-background/10 flex flex-col items-center justify-center mb-6 transition-colors duration-500 relative z-10 shadow-sm">
+                  <step.icon className="w-10 h-10 text-secondary group-hover:text-background transition-colors duration-500" />
                 </div>
-                <div className="text-secondary font-bold text-sm mb-2">{String(index + 1).padStart(2, '0')}</div>
-                <h3 className="font-heading font-bold text-foreground text-xl mb-2">
+                
+                <div className="absolute top-4 right-6 text-6xl font-black text-muted-foreground/5 group-hover:text-background/10 transition-colors pointer-events-none font-heading">
+                  {index + 1}
+                </div>
+                
+                <h3 className="font-heading font-bold text-foreground group-hover:text-background text-lg transition-colors duration-500 leading-snug">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team */}
-      <section className="py-24 bg-muted">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-16"
-          >
-            <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
-              The People
-            </span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground">
-              Our Team
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {teamRoles.map((role, index) => (
-              <motion.div
-                key={role.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-card rounded-2xl p-8 hover:bg-purple-700 transition-all duration-500"
-              >
-                <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 group-hover:bg-secondary/30 flex items-center justify-center flex-shrink-0 transition-colors duration-500">
-                    <role.icon className="w-7 h-7 text-primary group-hover:text-secondary transition-colors duration-500" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-bold text-foreground group-hover:text-background text-xl mb-2 transition-colors duration-500">
-                      {role.title}
-                    </h3>
-                    <p className="text-muted-foreground group-hover:text-background/70 transition-colors duration-500">
-                      {role.description}
-                    </p>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
