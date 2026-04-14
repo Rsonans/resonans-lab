@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import logoLight from "@/assets/resonans-logo-light.png";
 import logoDark from "@/assets/resonans-logo-dark.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navigation = [
   { name: "About", href: "/about" },
@@ -45,6 +46,7 @@ export function Header({ variant = "light" }: HeaderProps) {
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
           <Button 
             variant={variant === "dark" ? "hero" : "default"} 
             size="sm"
@@ -54,14 +56,16 @@ export function Header({ variant = "light" }: HeaderProps) {
           </Button>
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          type="button"
-          className={`md:hidden ${textColor}`}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
+          <button
+            type="button"
+            className={`${textColor}`}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}

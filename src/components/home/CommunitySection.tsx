@@ -6,7 +6,7 @@ import fellowshipImage from "@/assets/fellowship-scholars.jpg";
 
 export function CommunitySection() {
   return (
-    <section className="py-32 bg-purple-dark overflow-hidden">
+    <section className="py-32 bg-muted overflow-hidden">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Content side */}
@@ -21,7 +21,7 @@ export function CommunitySection() {
               <span className="text-accent text-sm font-semibold uppercase tracking-widest block mb-4">
                 Community
               </span>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-background">
+              <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground">
                 Join Our Community
               </h2>
             </motion.div>
@@ -38,10 +38,10 @@ export function CommunitySection() {
                   <Users2 className="w-7 h-7 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-heading font-bold text-background mb-2">
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                     Community of Scholars
                   </h3>
-                  <p className="text-background/70 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     A closed WhatsApp community of African researchers learning, collaborating, and building solutions together.
                   </p>
                 </div>
@@ -58,13 +58,13 @@ export function CommunitySection() {
                   <Award className="w-7 h-7 text-secondary" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-heading font-bold text-background mb-2">
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                     Scholars Fellowship
                   </h3>
-                  <p className="text-background/70 leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
                     A guided program supporting students and early-career researchers to translate their research into real-world impact.
                   </p>
-                  <Button variant="heroOutline" className="border-accent" size="sm" asChild>
+                  <Button variant="outline" className="border-accent hover:bg-accent hover:text-accent-foreground" size="sm" asChild>
                     <Link to="/fellowship">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -91,12 +91,12 @@ export function CommunitySection() {
                   className="w-full h-full object-cover"
                 />
                 {/* Purple overlay */}
-                <div className="absolute inset-0 bg-purple-700/30" />
+                <div className="absolute inset-0 bg-primary/20 mix-blend-multiply dark:mix-blend-screen" />
               </div>
               {/* Stat overlay */}
-              <div className="absolute -bottom-6 -left-6 bg-purple-800/90 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
+              <div className="absolute -bottom-6 -left-6 bg-card/95 backdrop-blur-sm rounded-xl p-6 border border-border">
                 <div className="text-secondary font-heading font-bold text-4xl">60+</div>
-                <div className="text-background/70 text-sm mt-1">Active community members</div>
+                <div className="text-muted-foreground text-sm mt-1">Active community members</div>
               </div>
             </div>
           </motion.div>
