@@ -8,27 +8,34 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const navigation = [
+  { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Resonans Lab", href: "/lab" },
+  { name: "Insights", href: "/insights" },
+  { name: "RBS", href: "/rbs" },
   // { name: "Our Work", href: "/#what-we-do" },
-  { name: "Project", href: "/project" },
+  // { name: "Project", href: "/project" },
   // { name: "Fellowship", href: "/fellowship" },
-  { name: "Join Us", href: "/join-us" },
+  // { name: "Join Us", href: "/join-us" },
 ];
 
-interface HeaderProps {
-  variant?: "light" | "dark";
-}
+// interface HeaderProps {
+//   variant?: "light" | "dark";
+// }
 
-export function Header({ variant = "light" }: HeaderProps) {
+export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const logo = variant === "dark" ? logoLight : logoDark;
-  const textColor = variant === "dark" ? "text-background" : "text-foreground";
-  const hoverColor = variant === "dark" ? "hover:text-accent" : "hover:text-primary";
-  const bgColor = variant === "dark" ? "bg-purple-800/95" : "bg-background/95";
+  // const logo = isHomePage ? logoLight : logoDark;
+  // const textColor = isHomePage ? "text-background" : "text-foreground";
+  // const hoverColor = isHomePage ? "hover:text-accent" : "hover:text-primary";
+  // const bgColor = isHomePage ? "bg-purple-800/95" : "bg-background/95";
+  const logo = logoDark;
+  const textColor = "text-foreground";
+  const hoverColor = "hover:text-primary";
+  const bgColor = "bg-background/95";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${bgColor} backdrop-blur-md`}>
@@ -48,9 +55,13 @@ export function Header({ variant = "light" }: HeaderProps) {
               {item.name}
             </Link>
           ))}
-          <ThemeToggle />
-          <Button 
-            variant={variant === "dark" ? "hero" : "default"} 
+
+        </div>
+
+        <div>
+          {/* <ThemeToggle /> */}
+          <Button
+            variant={"default"}
             size="sm"
             asChild
           >
@@ -59,7 +70,7 @@ export function Header({ variant = "light" }: HeaderProps) {
         </div>
 
         <div className="md:hidden flex items-center gap-4">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <button
             type="button"
             className={`${textColor}`}
@@ -90,8 +101,8 @@ export function Header({ variant = "light" }: HeaderProps) {
                   {item.name}
                 </Link>
               ))}
-              <Button 
-                variant={variant === "dark" ? "hero" : "default"} 
+              <Button
+                variant={"default"}
                 className="w-full mt-4"
                 asChild
               >
