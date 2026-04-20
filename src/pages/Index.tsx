@@ -1,9 +1,9 @@
 import { PageLayout } from "@/components/layout/PageLayout";
 import { HeroSection } from "@/components/home/HeroSection";
-import { WhoWeAreSection } from "@/components/home/WhoWeAreSection";
-import { WhatWeDoSection } from "@/components/home/WhatWeDoSection";
+import { CapabilitiesSection } from "@/components/home/CapabilitiesSection";
+import { ResonansCycleSection } from "@/components/home/ResonansCycleSection";
 import { ResearchInterestsSection } from "@/components/home/ResearchInterestsSection";
-import { FlagshipProjectSection } from "@/components/home/FlagshipProjectSection";
+import { ExploreSection } from "@/components/home/ExploreSection";
 import { CommunitySection } from "@/components/home/CommunitySection";
 import { PartnershipsSection } from "@/components/home/PartnershipsSection";
 
@@ -11,11 +11,11 @@ const Index = () => {
   return (
     <PageLayout headerVariant="dark">
       <HeroSection />
-      <WhoWeAreSection />
-      <WhatWeDoSection />
-      <ResearchInterestsSection />
-      <FlagshipProjectSection />
-      <CommunitySection />
+      <CapabilitiesSection />
+      <ResonansCycleSection />
+      {/* <ResearchInterestsSection /> */}
+      <ExploreSection />
+      {/* <CommunitySection /> */}
       <PartnershipsSection />
     </PageLayout>
   );
