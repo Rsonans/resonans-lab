@@ -1,152 +1,156 @@
 import { motion } from "framer-motion";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { 
-  Search, 
-  FileText,
-  Lightbulb,
+  BrainCog, 
+  Beaker,
+  Compass,
   Hammer, 
-  Rocket,
-  Target
+  Rocket
 } from "lucide-react";
 import aboutHero from "@/assets/about-hero.jpg";
-
-const cycleSteps = [
-  { icon: Search, title: "Understanding the problem" },
-  { icon: FileText, title: "Generating evidence" },
-  { icon: Lightbulb, title: "Translating insights" },
-  { icon: Hammer, title: "Building solutions" },
-  { icon: Rocket, title: "Testing and distributing them" },
-];
+import { ApproachSection } from "@/components/about/ApproachSection";
+import { CTASection } from "@/components/about/CTASection";
 
 const About = () => {
   return (
     <PageLayout headerVariant="light">
       {/* Hero section with image */}
-      <section className="relative pt-32 pb-24 bg-background overflow-hidden">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-[#FCF8FB] overflow-hidden">
+        <div className="container max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="lg:col-span-7"
             >
-              <span className="text-secondary text-sm font-semibold uppercase tracking-widest block mb-4">
-                Who We Are
+              <span className="text-[#9C0075] text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase block mb-8">
+                The Mission
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
-                Resonans exists to solve a simple problem:
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-[#2C0052] mb-8 leading-[1.05] tracking-tight">
+                Too much valuable<br />research never<br />leaves papers.
               </h1>
-              <div className="space-y-8 text-lg text-muted-foreground leading-relaxed">
-                <p className="text-foreground font-semibold text-2xl lg:text-3xl relative pl-6 border-l-4 border-accent py-2 leading-tight">
-                  Too much valuable research never leaves papers.
-                </p>
-                <p className="text-xl">
-                  We identify real-world challenges, conduct structured research, and translate findings into solutions that people can actually use.
+              <div className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl font-body">
+                <p>
+                  We bridge the gap between abstract intellectual labor and real-world implementation. By applying architectural rigor to translational research, we ensure that every insight finds its pulse in society.
                 </p>
               </div>
             </motion.div>
             
+            {/* Right Image Content */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="lg:col-span-5"
+              className="lg:col-span-5 relative mt-12 lg:mt-0"
             >
-              <div className="relative">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={aboutHero} 
-                    alt="Abstract representation of research and community connection" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-secondary/30 rounded-2xl -z-10" />
-                <div className="absolute -top-6 -right-6 w-full h-full border-2 border-primary/20 rounded-2xl -z-10" />
+              <div className="relative z-10 w-full aspect-square max-w-[500px] mx-auto lg:ml-auto">
+                {/* Offset abstract background shape */}
+                <div className="absolute -top-6 -right-6 lg:-top-8 lg:-right-8 w-full h-full bg-[#EADDED] rounded-xl -z-10" />
+                
+                {/* Main Image */}
+                <img 
+                  src={aboutHero} 
+                  alt="Resonans Mission" 
+                  className="w-full h-full object-cover rounded-xl shadow-[0_20px_40px_-15px_rgba(44,0,82,0.3)]"
+                />
               </div>
             </motion.div>
+            
           </div>
         </div>
       </section>
 
-      {/* What Makes Us Different */}
-      <section className="py-32 bg-purple-dark relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)]" style={{ backgroundSize: '24px 24px' }} />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
-        <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-block py-1 px-4 rounded-full bg-secondary/20 text-secondary text-sm font-semibold uppercase tracking-widest mb-8 border border-secondary/30">
-                What makes us different
-              </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-background mb-8 leading-tight">
-                We don’t treat research as the final output. <br className="hidden md:block" />
-                <span className="text-secondary block mt-4">We treat it as the starting point.</span>
-              </h2>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Cycle */}
-      <section className="py-24 bg-muted relative">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-20 max-w-3xl mx-auto"
-          >
-            <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-2xl mb-6 text-primary shadow-inner">
-               <Target className="w-8 h-8" />
-            </div>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground leading-tight">
-              Every project we run moves through a <span className="text-primary relative inline-block mx-2">
-                full cycle
-                <span className="absolute bottom-1 left-0 w-full h-3 bg-secondary/30 -z-10 rounded-full"></span>
-              </span>
+      {/* What Makes Us Different / Bento Box */}
+      <section className="py-24 bg-[#FCF8FB]">
+        <div className="container max-w-7xl mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-[40px] font-heading font-bold text-[#2C0052] mb-4">
+              What makes us different
             </h2>
-          </motion.div>
+            <p className="text-lg text-[#594B6B] max-w-2xl font-body">
+              We don’t treat research as the final output.
+We treat it as the starting point.
+            </p>
+          </div>
 
-          {/* Cycle Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 gap-y-12">
-            {cycleSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative group bg-card rounded-2xl p-8 hover:bg-purple-700 transition-all duration-500 shadow-sm border border-border/50 hover:border-purple-600 hover:shadow-2xl flex flex-col items-center text-center -mt-2 hover:-translate-y-2"
-              >
-                {/* Visual Connector for desktop */}
-                {index < cycleSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-[40%] -right-3 w-6 h-0.5 bg-border group-hover:bg-accent/50 transition-colors z-0" />
-                )}
-                
-                <div className="w-20 h-20 rounded-2xl bg-secondary/10 group-hover:bg-background/10 flex flex-col items-center justify-center mb-6 transition-colors duration-500 relative z-10 shadow-sm">
-                  <step.icon className="w-10 h-10 text-secondary group-hover:text-background transition-colors duration-500" />
-                </div>
-                
-                <div className="absolute top-4 right-6 text-6xl font-black text-muted-foreground/5 group-hover:text-background/10 transition-colors pointer-events-none font-heading">
-                  {index + 1}
-                </div>
-                
-                <h3 className="font-heading font-bold text-foreground group-hover:text-background text-lg transition-colors duration-500 leading-snug">
-                  {step.title}
-                </h3>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            {/* 1. Understanding the Problem */}
+            <div className="lg:col-span-2 bg-[#FCF5FA] rounded-md p-8 lg:p-10 flex flex-col items-start shadow-sm">
+              <div className="mb-6">
+                <BrainCog className="w-8 h-8 text-[#9C0075]" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#2C0052] mb-4">Understanding the Problem</h3>
+              <p className="text-[#594B6B] flex-grow max-w-md leading-relaxed mb-12">
+                We begin by deconstructing complex societal and industrial challenges, identifying the exact architectural flaws where research can provide a structural fix.
+              </p>
+              <div className="text-[10px] font-bold text-[#9C0075] uppercase tracking-wide mt-auto">
+                PHASE 01: DIAGNOSIS
+              </div>
+            </div>
+
+            {/* 2. Generating Evidence */}
+            <div className="bg-[#FAE8FF] rounded-md p-8 lg:p-10 flex flex-col items-start shadow-sm">
+              <div className="mb-6">
+                <Beaker className="w-8 h-8 text-[#2C0052]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#2C0052] mb-4">Generating Evidence</h3>
+              <p className="text-[#594B6B] text-[15px] leading-relaxed">
+                Deep-dive technical investigation and empirical validation in the ResonansLab environment.
+              </p>
+            </div>
+
+            {/* 3. 360° */}
+            <div className="bg-[#27004D] rounded-md p-8 lg:p-10 flex flex-col items-center justify-center text-center shadow-sm">
+              <h3 className="text-[40px] font-black text-white mb-2 tracking-tight">360°</h3>
+              <p className="text-[#D3BDE3] text-[13px]">
+                Translational Excellence
+              </p>
+            </div>
+
+            {/* 4. Translating Insights */}
+            <div className="bg-[#F8E8FF] rounded-md p-8 lg:p-10 flex flex-col items-start shadow-sm">
+              <div className="mb-6">
+                <Compass className="w-8 h-8 text-[#9C0075]" />
+              </div>
+              <h3 className="text-xl font-bold text-[#2C0052] mb-4">Translating Insights</h3>
+              <p className="text-[#594B6B] text-[15px] leading-relaxed">
+                Converting dense academic datasets into actionable architectural blueprints and policy frameworks.
+              </p>
+            </div>
+
+            {/* 5. Building Solutions */}
+            <div className="lg:col-span-2 bg-[#AE2585] rounded-md p-8 lg:p-10 flex flex-col items-start relative overflow-hidden shadow-sm">
+              <div className="relative z-10 w-full h-full flex flex-col justify-center">
+                <h3 className="text-3xl font-bold text-white mb-4">Building Solutions</h3>
+                <p className="text-white/90 text-lg max-w-md leading-relaxed">
+                  Our engineering teams turn blueprints into software, hardware, and structural systems ready for the real world.
+                </p>
+              </div>
+              {/* Watermark Icon */}
+              <Hammer className="absolute -bottom-10 -right-4 w-48 h-48 text-[#931C6F] pointer-events-none transform -rotate-12" />
+            </div>
+
+            {/* 6. Testing & Distribution */}
+            <div className="bg-[#FCF5FA] rounded-md p-8 lg:p-10 flex flex-col items-start shadow-sm relative">
+              <h3 className="text-xl font-bold text-[#2C0052] mb-4">Testing & Distribution</h3>
+              <p className="text-[#594B6B] text-[15px] leading-relaxed mb-6">
+                Stress-testing solutions in live pilot environments before wide-scale global deployment.
+              </p>
+              <div className="mt-auto ml-auto">
+                <Rocket className="w-6 h-6 text-[#7F8B17]" />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
+
+      <ApproachSection />
+      <CTASection />
     </PageLayout>
   );
 };
