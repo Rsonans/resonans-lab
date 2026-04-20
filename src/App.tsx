@@ -3,8 +3,12 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "@/components/theme-provider";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import ResonansLab from "./pages/ResonansLab";
+import Insights from "./pages/Insights";
+import RBS from "./pages/RBS";
 import Project from "./pages/Project";
 import Fellowship from "./pages/Fellowship";
 import Partner from "./pages/Partner";
@@ -22,6 +26,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/lab" element={<ResonansLab />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/rbs" element={<RBS />} />
           <Route path="/project" element={<Project />} />
           <Route path="/fellowship" element={<Fellowship />} />
           <Route path="/partner" element={<Partner />} />

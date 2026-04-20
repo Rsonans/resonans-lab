@@ -1,78 +1,91 @@
 import { Link } from "react-router-dom";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import logoLight from "@/assets/resonans-logo-light.png";
-
-const quickLinks = [
-  { name: "About Us", href: "/about" },
-  { name: "Our Work", href: "/#what-we-do" },
-  { name: "Projects", href: "/project" },
-  { name: "Fellowship", href: "/fellowship" },
-  { name: "Partner With Us", href: "/partner" },
-];
 
 export function Footer() {
   return (
-    <footer className="bg-purple-dark text-background">
-      <div className="container py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Brand column */}
-          <div className="lg:col-span-5">
-            <img src={logoLight} alt="Resonans" className="h-10 w-auto mb-8" />
-            <p className="text-background/70 max-w-md text-lg leading-relaxed mb-8">
-              Resonans is a research-led organization translating knowledge into real-world impact across Africa.
-            </p>
-            <p className="text-background/40 text-sm italic">
-              Where research meets real life
-            </p>
-          </div>
-
-          {/* Quick links */}
-          <div className="lg:col-span-3 lg:col-start-7">
-            <h4 className="text-accent font-heading font-bold text-sm uppercase tracking-widest mb-6">
-              Quick Links
-            </h4>
-            <ul className="space-y-4">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-background/70 hover:text-secondary transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div className="lg:col-span-4">
-            <h4 className="text-secondary font-heading font-bold text-sm uppercase tracking-widest mb-6">
-              Stay Updated
-            </h4>
-            <p className="text-background/70 mb-6">
-              Stay updated on our research, projects, and impact.
-            </p>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <Input
-                type="email"
-                placeholder="Your email"
-                className="bg-purple-700/50 border-purple-500/30 text-background placeholder:text-background/50 h-12"
-              />
-              <Button variant="heroSecondary" size="default" className="w-full">
-                Subscribe
-              </Button>
-            </form>
-          </div>
-        </div>
-
-        {/* Thin yellow divider */}
-        <div className="mt-16 pt-8 border-t border-accent/30">
-          <p className="text-background/50 text-sm text-center">
-            © {new Date().getFullYear()} Resonans. All rights reserved.
+    <footer className="bg-[#1C003D] text-[#D3BDE3] py-20 px-6 xl:px-0">
+      <div className="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        
+        {/* Brand & Copyright */}
+        <div className="flex flex-col">
+          <h2 className="text-[#E8CD00] text-2xl font-bold font-heading mb-8 tracking-wide">
+            Resonans
+          </h2>
+          <p className="text-sm leading-relaxed max-w-[220px]">
+            © {new Date().getFullYear()} Resonans. The Architectural Pulse of Translational Research.
           </p>
         </div>
+
+        {/* Company Links */}
+        <div className="flex flex-col">
+          <h4 className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-8">
+            Company
+          </h4>
+          <ul className="space-y-5 text-sm">
+            <li>
+              <Link to="/contact" className="hover:text-white transition-colors duration-200">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-white transition-colors duration-200">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/lab" className="hover:text-white transition-colors duration-200">
+                ResonansLab
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Legal Links */}
+        <div className="flex flex-col">
+          <h4 className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-8">
+            Legal
+          </h4>
+          <ul className="space-y-5 text-sm">
+            <li>
+              <Link to="/privacy" className="hover:text-white transition-colors duration-200">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms" className="hover:text-white transition-colors duration-200">
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link to="/ethics" className="hover:text-white transition-colors duration-200">
+                Research Ethics
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Newsletter Form */}
+        <div className="flex flex-col">
+          <h4 className="text-white font-bold text-sm tracking-[0.15em] uppercase mb-8">
+            Newsletter
+          </h4>
+          <p className="text-sm mb-6 leading-relaxed max-w-[280px]">
+            Receive our monthly insights on translational breakthroughs.
+          </p>
+          <form className="flex w-full" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="email"
+              placeholder="Email address"
+              className="px-4 py-3 bg-[#421B68] text-white placeholder-[#8E79A5] w-full focus:outline-none text-sm rounded-none"
+            />
+            <button
+              type="submit"
+              className="bg-[#E8CD00] text-black font-bold text-xs tracking-[0.15em] uppercase px-5 py-3 whitespace-nowrap hover:bg-[#CCA800] transition-colors rounded-none"
+            >
+              JOIN
+            </button>
+          </form>
+        </div>
+
       </div>
     </footer>
   );
