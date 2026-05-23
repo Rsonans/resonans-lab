@@ -8,8 +8,8 @@ export function ExploreSection() {
       category: "Portfolio",
       title: "Our Work",
       description: "Case studies of successful transitions from lab to market.",
-      linkText: "Explore Cases",
-      linkTo: "/work",
+      linkText: "Explore Projects",
+      linkTo: "/rbs",
       isDark: false,
     },
     {
