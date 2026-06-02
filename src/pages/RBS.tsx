@@ -3,6 +3,7 @@ import { RBSHeroSection } from "@/components/rbs/RBSHeroSection";
 import { RBSBridgingGapSection } from "@/components/rbs/RBSBridgingGapSection";
 import { RBSWhatWeDoSection } from "@/components/rbs/RBSWhatWeDoSection";
 import { RBSProgressSection } from "@/components/rbs/RBSProgressSection";
+import { RBSFellowsSection } from "@/components/rbs/RBSFellowsSection";
 import { RBSTeamSection } from "@/components/rbs/RBSTeamSection";
 import { RBSCTASection } from "@/components/rbs/RBSCTASection";
 
@@ -13,8 +14,8 @@ const RBS = () => {
             <RBSBridgingGapSection />
             <RBSWhatWeDoSection />
             <RBSProgressSection />
-            <RBSProgressSection />
-            <RBSTeamSection />
+            <RBSFellowsSection />
+            {/* <RBSTeamSection /> */}
             <RBSCTASection />
         </PageLayout>
     );
